@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.2
+
+- Fix API requests when eeroVista is opened from the Home Assistant sidebar.
+- Rewrite API paths stored in JavaScript variables, including the nodes,
+  topology, IP-reservation and port-forward endpoints.
+- Keep direct access on the configured host port as a fallback.
+
 ## 0.3.1
 
 - Restore the locally built, version-pinned source image after the upstream

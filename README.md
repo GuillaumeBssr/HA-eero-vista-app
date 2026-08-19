@@ -30,7 +30,8 @@ This wrapper is not affiliated with Eero or the eeroVista project. eeroVista use
 
 ## Home Assistant Ingress and sidebar
 
-Version 0.3.1 adds an internal compatibility proxy for Home Assistant Ingress.
+Version 0.3.2 includes an internal compatibility proxy for Home Assistant Ingress,
+including API paths assembled in the browser application.
 Home Assistant therefore owns the public URL and the sidebar shortcut works
 through the LAN, Tailscale, or any other valid Home Assistant address.
 

@@ -45,7 +45,7 @@ The token-encryption key is generated on first start and stored persistently as:
 
 ## Home Assistant sidebar and Ingress
 
-Version 0.3.1 exposes eeroVista through Home Assistant Ingress. After the App
+Version 0.3.2 exposes eeroVista through Home Assistant Ingress. After the App
 is updated and started:
 
 1. Open the eeroVista App information page.

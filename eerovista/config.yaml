@@ -1,5 +1,5 @@
 name: eeroVista
-version: "0.3.1"
+version: "0.3.2"
 slug: eerovista
 description: Read-only monitoring and topology visualization for Eero mesh networks
 url: https://github.com/GuillaumeBssr/HA-eero-vista-app
