@@ -6,10 +6,9 @@ eeroVista provides read-only Eero mesh monitoring, historical data, node restart
 
 After installation, start the App and use **Open Web UI** to complete eeroVista's Eero authentication wizard.
 
-The default host port is 8780 and can be changed in the App's Network settings.
-Home Assistant Ingress is not enabled because the current upstream UI is not
-path-prefix aware.
+Home Assistant Ingress is enabled through an internal compatibility proxy, so
+the sidebar shortcut follows the Home Assistant URL on both LAN and Tailscale.
+Enable **Show in sidebar** on the App information page after updating.
 
-To add an all-user sidebar shortcut, create a Home Assistant Webpage dashboard
-pointing to `http://192.168.4.12:8780`, enable **Show in sidebar**, and leave
-**Admin only** disabled.
+Direct access remains available on host port 8780 as a fallback and can be
+changed in the App's Network settings.

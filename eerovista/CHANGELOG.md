@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.1
+
+- Restore the locally built, version-pinned source image after the upstream
+  GHCR base image failed during Supervisor's ARM64 BuildKit build.
+- Keep eeroVista pinned to `v2.9.7`.
+- Add Home Assistant Ingress on internal port 8099.
+- Add an all-user `eeroVista` sidebar panel without a fixed LAN or Tailscale URL.
+- Add an internal Nginx compatibility proxy that rewrites eeroVista's
+  root-relative URLs to the current Home Assistant Ingress prefix.
+
 ## 0.3.0
 
 - Upgrade eeroVista from `v2.7.1` to `v2.9.7`.

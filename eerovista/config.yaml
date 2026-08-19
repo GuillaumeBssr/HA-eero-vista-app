@@ -1,5 +1,5 @@
 name: eeroVista
-version: "0.3.0"
+version: "0.3.1"
 slug: eerovista
 description: Read-only monitoring and topology visualization for Eero mesh networks
 url: https://github.com/GuillaumeBssr/HA-eero-vista-app
@@ -17,8 +17,13 @@ ports:
 ports_description:
   8080/tcp: eeroVista web interface and API
 
-webui: "http://[HOST]:[PORT:8080]"
 watchdog: "http://[HOST]:[PORT:8080]/api/health"
+
+ingress: true
+ingress_port: 8099
+panel_icon: mdi:wifi
+panel_title: eeroVista
+panel_admin: false
 
 options:
   timezone: "Europe/Paris"

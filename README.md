@@ -8,7 +8,8 @@ This repository is intentionally a **Home Assistant App repository**, not a HACS
 
 - Home Assistant OS
 - Raspberry Pi 4 / `aarch64`
-- eeroVista web UI on host port 8780 (container port 8080)
+- Home Assistant Ingress and all-user sidebar panel
+- Optional direct web UI on host port 8780 (container port 8080)
 - Persistent database in the App `/data` directory
 - No DNS port exposure
 - MQTT integration disabled by default
@@ -27,17 +28,11 @@ Then open:
 
 This wrapper is not affiliated with Eero or the eeroVista project. eeroVista uses an unofficial reverse-engineered Eero API.
 
-## Why this does not use Home Assistant Ingress yet
+## Home Assistant Ingress and sidebar
 
-Ingress avoids host ports, but the current upstream UI uses root-relative URLs
-such as `/static/...`, `/api/...`, `/devices`, and `/network`. Those URLs are
-not safe behind Home Assistant's path-prefixed Ingress proxy without patching
-the application. This experimental release therefore uses host port 8780 by
-default. The port can be changed in the App's **Network** settings if needed.
+Version 0.3.1 adds an internal compatibility proxy for Home Assistant Ingress.
+Home Assistant therefore owns the public URL and the sidebar shortcut works
+through the LAN, Tailscale, or any other valid Home Assistant address.
 
-## Add eeroVista to the Home Assistant sidebar
-
-Until upstream supports path-prefixed Ingress, create a **Webpage dashboard**
-under **Settings → Dashboards** with URL `http://192.168.4.12:8780`, enable
-**Show in sidebar**, and leave **Admin only** disabled for access by all users.
-See the App documentation for the complete steps.
+After updating, enable **Show in sidebar** on the eeroVista App information
+page. The panel is available to non-admin users (`panel_admin: false`).
