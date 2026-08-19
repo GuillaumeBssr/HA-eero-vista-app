@@ -43,7 +43,22 @@ The token-encryption key is generated on first start and stored persistently as:
 
 `/data/.eerovista_encryption_key`
 
-## Web port and Ingress
+## Home Assistant sidebar shortcut
+
+The reliable way to add eeroVista to the Home Assistant sidebar is a Webpage
+dashboard:
+
+1. Open **Settings → Dashboards**.
+2. Select **Add dashboard**.
+3. Choose **Webpage**.
+4. Use title `eeroVista` and icon `mdi:wifi`.
+5. Set the URL to `http://192.168.4.12:8780` (or replace the address/port with
+   the effective address shown by your installation).
+6. Enable **Show in sidebar**.
+7. Leave **Admin only** disabled if the shortcut should be available to all
+   Home Assistant users.
+
+## Web port and native App Ingress
 
 eeroVista listens on port 8080 inside its isolated container. The default host
 mapping is port 8780 to reduce the likelihood of a collision. You can change
@@ -59,7 +74,8 @@ Upstream eeroVista includes optional DNS functionality. This Home Assistant wrap
 
 ## Updating upstream eeroVista
 
-This wrapper builds from the upstream stable tag `v2.7.1`.
+This wrapper uses the official multi-architecture upstream image pinned to
+`ghcr.io/yeraze/eerovista:v2.9.7`.
 
 ## Authentication limitation
 

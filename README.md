@@ -13,6 +13,17 @@ This repository is intentionally a **Home Assistant App repository**, not a HACS
 - No DNS port exposure
 - MQTT integration disabled by default
 
+## Installation
+
+Add this repository URL to Home Assistant:
+
+`https://github.com/GuillaumeBssr/HA-eero-vista-app`
+
+Then open:
+
+**Settings → Apps → App store → ⋮ → Repositories**
+
+## Upstream
 
 This wrapper is not affiliated with Eero or the eeroVista project. eeroVista uses an unofficial reverse-engineered Eero API.
 
@@ -23,3 +34,10 @@ such as `/static/...`, `/api/...`, `/devices`, and `/network`. Those URLs are
 not safe behind Home Assistant's path-prefixed Ingress proxy without patching
 the application. This experimental release therefore uses host port 8780 by
 default. The port can be changed in the App's **Network** settings if needed.
+
+## Add eeroVista to the Home Assistant sidebar
+
+Until upstream supports path-prefixed Ingress, create a **Webpage dashboard**
+under **Settings → Dashboards** with URL `http://192.168.4.12:8780`, enable
+**Show in sidebar**, and leave **Admin only** disabled for access by all users.
+See the App documentation for the complete steps.

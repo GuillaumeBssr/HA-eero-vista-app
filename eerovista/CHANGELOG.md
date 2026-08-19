@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0
+
+- Upgrade eeroVista from `v2.7.1` to `v2.9.7`.
+- Build on the official prebuilt multi-architecture eeroVista image instead of
+  cloning and compiling the application on the Home Assistant host.
+- Document an all-user Home Assistant sidebar shortcut using a Webpage
+  dashboard while upstream remains incompatible with path-prefixed Ingress.
+
 ## 0.2.0
 
 - Start both the eeroVista collector and web server; the earlier draft started
